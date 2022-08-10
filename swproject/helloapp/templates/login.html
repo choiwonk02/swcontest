@@ -1,0 +1,31 @@
+{% extends 'header.html'%}
+{% load static %}
+{%block title%}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {%endblock%}
+
+    {%block content2%}
+
+    <div class="wrap0">
+        <div class="login">
+            <h2>로그인</h2>
+            
+            <div class="login_id">
+                <h4>학번</h4>
+                <input type="number" name="" id="" placeholder="school Number">
+            </div>
+            <div class="login_pw">
+                <h4>비밀번호</h4>
+                <input type="password" name="" id="" placeholder="Password">
+            </div>
+            <div class="submit">
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}

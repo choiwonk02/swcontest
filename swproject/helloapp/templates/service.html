@@ -1,0 +1,126 @@
+{% extends 'header.html' %}
+{% load static %}
+    {% block title%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>중앙도서관 층별 실시간 혼잡도</title>
+
+</head>
+
+<body>
+    {%endblock%}
+
+    {% block content2 %}
+
+
+    <BR>
+    <TABLE align="center" BORDER="1" CELLSPACING="0" CELLPADDING="1" WIDTH=1000>
+        <thead><b>
+            <h1 ALIGN="CENTER">중앙도서관 층별 실시간 혼잡도</h1>
+        </b></thead>
+        <br>
+        <br>
+
+        <tbody>
+
+            <tr align="right" width="100%">
+                <td id="clock" colspan="3" height="25">
+                    <script>
+                        var Target = document.getElementById("clock");
+                        function clock() {
+                            var time = new Date();
+
+                            var month = time.getMonth();
+                            var date = time.getDate();
+                            var day = time.getDay();
+                            var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+                            var hours = time.getHours();
+                            var minutes = time.getMinutes();
+                            var seconds = time.getSeconds();
+
+                            Target.innerText =
+                                `${month + 1}월 ${date}일 ${week[day]}요일 ` +
+                                `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+                        }
+                        clock();
+                        setInterval(clock, 1000); 
+                    </script>
+                </td>
+            </tr>
+            <tr ALIGN="CENTER" HEIGHT="25">
+                <td class="num">순번</td>
+                <td class="name">층 별</td>
+                <td class="percent">혼잡도(%)</TD>
+            </TR>
+
+            <tr align="CENTER">
+                <td>1</td>
+                <td>1층</td>
+                <td>...</td>
+            </tr>
+
+            <tr align="CENTER">
+                <td>2</td>
+                <td>2층</td>
+                <td>...</td>
+            </tr>
+
+            <tr align="CENTER">
+                <td>3</td>
+                <td>3층</td>
+                <td>...</td>
+            </tr>
+
+            <tr align="CENTER">
+                <td>4</td>
+                <td>4층</td>
+                <td>...</td>
+            </tr>
+
+            <tr align="CENTER">
+                <td>5</td>
+                <td>5층</td>
+                <td>...</td>
+            </tr>
+
+            <tr align="CENTER">
+                <td>6</td>
+                <td>6층</td>
+                <td>...</td>
+            </tr>
+
+            <tr align="CENTER">
+                <td>7</td>
+                <td>7층</td>
+                <td>...</td>
+            </tr>
+            <tfoot>
+            <tr align="CENTER">
+                <td colspan="2">도서관 전체 혼잡도 평균</td>
+                <td>...</td>
+            </tr>
+        </tfoot>
+
+    </TABLE>
+    <br>
+    <br>
+    <table align="center" BORDER="1" CELLSPACING="0" CELLPADDING="1" WIDTH=500 height='25'>
+
+        
+            <tr align="CENTER">
+                <td>혼잡도가 높은 시간대</td>
+                <td>혼잡도가 높은 층</td>
+            </tr>
+
+            <tr align="CENTER">
+                <td>...</td>
+                <td>...</td>
+            </tr>
+    </table>
+    
+</body>
+
+
+</html>
+{% endblock %}
