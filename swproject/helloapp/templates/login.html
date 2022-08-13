@@ -1,15 +1,13 @@
 {% extends 'header.html'%}
 {% load static %}
-{%block title%}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{%block content%}
     <title>Document</title>
 </head>
 <body>
-    {%endblock%}
-
-    {%block content2%}
-
     <div class="wrap0">
+        <form method='post' action="{% url 'login' %}"
+        {%csrf_token%}
+        {%include "form_errors.html" %}
         <div class="login">
             <h2>로그인</h2>
             

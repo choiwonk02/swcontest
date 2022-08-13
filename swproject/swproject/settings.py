@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'helloapp',
+    'accountapp',
 ]
 
 MIDDLEWARE = [
@@ -114,3 +115,6 @@ STATICFILES_DIRS=[
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LONIN_REDIRECT_URL ='/'
+LOGOUT_REDIRECT_URL = '/'
